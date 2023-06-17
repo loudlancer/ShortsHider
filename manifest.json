@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "ShortsHider",
+  "version": "1.0",
+  "description": "Hide Shorts on YouTube",
+  "permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
